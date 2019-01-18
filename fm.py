@@ -10,7 +10,7 @@ f_m = 220.0
 k = 50.0
 
 tis = np.arange(duration_s * f_s)
-carrier = 2 * np.pi * tis * f_c / tis
+carrier = 2 * np.pi * tis * f_c / f_s
 modulator = k * np.sin(2 * np.pi * tis * f_m / f_s)
 waveform = np.cos(carrier + modulator)
 
